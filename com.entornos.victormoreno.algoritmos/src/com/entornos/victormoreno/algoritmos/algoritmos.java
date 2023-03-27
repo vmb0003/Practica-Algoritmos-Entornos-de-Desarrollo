@@ -10,7 +10,7 @@ package com.entornos.victormoreno.algoritmos;
 public abstract class algoritmos {
 
 	/**
-	 * 
+	 * Metodo fobinacci
 	 * @param numero
 	 * @return
 	 */
@@ -20,11 +20,37 @@ public abstract class algoritmos {
 		return fibonacci(numero-1) + fibonacci(numero-2);
 	}
 	
+	/**
+	 * Metodo factorial
+	 * @param numero
+	 * @return
+	 */
+	
 	public static int factorial(int numero) {
 		int factorial = 1;
 		for(int i = 2; i <= numero; i++) {
 			factorial *= i;
 		}
 		return factorial;
+	}
+	
+	/**
+	 * Metodo primo
+	 * @param numero
+	 * @return
+	 */
+	
+	public static boolean primo(int numero) {
+		boolean ok = true;
+		int divisor = 2;
+		
+		while((ok) && (divisor!=numero)) {
+			if(numero%divisor==0) {
+				ok = false;
+			} else {
+				divisor++;
+			}
+		}
+		return ok;
 	}
 }
