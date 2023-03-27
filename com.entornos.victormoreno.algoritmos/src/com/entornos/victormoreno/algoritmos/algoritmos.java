@@ -11,23 +11,33 @@ public abstract class algoritmos {
 
 	/**
 	 * Metodo fobinacci
+	 * Devuelve el numero fibonacci del numero que pasemos por parametro
 	 * @param numero
-	 * @return
+	 * @return numero fibonacci
 	 */
 	
 	public static int fibonacci(int numero) {
-		if(numero < 2) return numero;
-		return fibonacci(numero-1) + fibonacci(numero-2);
+		int a = 0, b = 1, c;
+		if(numero == 0) {
+			return a;
+		}
+		for(int i = 2; i <= numero; i++) {
+			c = a + b;
+			a = b;
+			b = c;
+		}
+		return b;
 	}
 	
 	/**
 	 * Metodo factorial
+	 * Devuelve el numero factorial del numero que introduzcamos
 	 * @param numero
-	 * @return
+	 * @return factorial
 	 */
 	
-	public static int factorial(int numero) {
-		int factorial = 1;
+	public static long factorial(int numero) {
+		long factorial = 1;
 		for(int i = 2; i <= numero; i++) {
 			factorial *= i;
 		}
@@ -36,8 +46,9 @@ public abstract class algoritmos {
 	
 	/**
 	 * Metodo primo
+	 * Devuelve un booleano que nos indica si el numero introducido es primo o no
 	 * @param numero
-	 * @return
+	 * @return primo
 	 */
 	
 	public static boolean primo(int numero) {
