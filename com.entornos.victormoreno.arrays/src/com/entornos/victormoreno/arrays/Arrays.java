@@ -21,7 +21,7 @@ public abstract class Arrays {
 		for(int i = 0; i < m.length; i++) {
 			suma += m[i];
 		}
-		return suma/m.length;
+		return ((double)suma/m.length);
 	}
 	
 	/**
@@ -31,12 +31,12 @@ public abstract class Arrays {
 	 * @return Un int que representa la mediana del array
 	 */
 	
-	public static int mediana(int[] m) {
-		int mediana;
+	public static double mediana(int[] m) {
+		double mediana;
 		java.util.Arrays.sort(m);
 		
 		if(m.length%2 == 0) {
-			mediana = m[m.length/2] + m[(m.length)-1];
+			mediana = (double)(m[m.length/2] + m[(m.length)/2-1])/2;
 		} else {
 			mediana = m[((int)m.length/2)];
 		}
