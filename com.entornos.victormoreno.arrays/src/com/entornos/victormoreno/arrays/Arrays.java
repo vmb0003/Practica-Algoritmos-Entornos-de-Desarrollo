@@ -22,4 +22,24 @@ public abstract class Arrays {
 		return mediana;
 	}
 	
+	public static int maximo(int[] m) {
+		int max = m[0];
+		for(int i = 1; i < m.length; i++) {
+			if(m[i] > max) {
+				max = m[i];
+			}
+		}
+		return max;
+	}
+	
+	public static int minimo(int[] m) {
+		int min = m[0];
+		for(int i = 1; i < m.length; i++) {
+			if(m[i] < min) {
+				min = m[i];
+			}
+		}
+		return min;
+	}
+	
 }
