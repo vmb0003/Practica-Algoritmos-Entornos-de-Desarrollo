@@ -1,7 +1,21 @@
 package com.entornos.victormoreno.arrays;
 
+/**
+ * 
+ * @author victor
+ * @version 1.0
+ *
+ */
+
 public abstract class Arrays {
 
+	/**
+	 * Metodo media
+	 * Devuelve la media del array que pasamos por parametro
+	 * @param m Un array del cual vamos a calcular la media
+	 * @return Un double que representa la media del array
+	 */
+	
 	public static double media(int[] m) {
 		int suma = 0;
 		for(int i = 0; i < m.length; i++) {
@@ -9,6 +23,13 @@ public abstract class Arrays {
 		}
 		return suma/m.length;
 	}
+	
+	/**
+	 * Metodo mediana
+	 * Devuelve la mediana del array que pasamos por parametro
+	 * @param m Un array del cual vamos a calcular la mediana
+	 * @return Un int que representa la mediana del array
+	 */
 	
 	public static int mediana(int[] m) {
 		int mediana;
@@ -22,6 +43,13 @@ public abstract class Arrays {
 		return mediana;
 	}
 	
+	/**
+	 * Metodo maximo
+	 * Devuelve el valor maximo de un array
+	 * @param m Un array del cual vamos a extraer el valor maximo
+	 * @return Un int que representa el valor maximo del array
+	 */
+	
 	public static int maximo(int[] m) {
 		int max = m[0];
 		for(int i = 1; i < m.length; i++) {
@@ -32,6 +60,13 @@ public abstract class Arrays {
 		return max;
 	}
 	
+	/**
+	 * Metodo minimo
+	 * Devuelve el valor minimo de un array
+	 * @param m Un array del cual vamos a extraer el valor minimo
+	 * @return Un int que representa el valor minimo del array
+	 */
+	
 	public static int minimo(int[] m) {
 		int min = m[0];
 		for(int i = 1; i < m.length; i++) {
@@ -41,5 +76,4 @@ public abstract class Arrays {
 		}
 		return min;
 	}
-	
 }
